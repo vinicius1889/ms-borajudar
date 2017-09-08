@@ -22,7 +22,7 @@ public class VotacaoController {
 
 
     @RequestMapping(value="/",method = RequestMethod.POST)
-    public RequestVotacaoDTO votar(@RequestBody ResponseVotacaoVO votacao){
+    public RankingDTO votar(@RequestBody RequestVotacaoDTO votacao){
         return service.votar(votacao);
     }
 

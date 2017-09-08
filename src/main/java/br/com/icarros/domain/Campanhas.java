@@ -1,13 +1,11 @@
 package br.com.icarros.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,16 +22,16 @@ public class Campanhas implements Serializable{
     private Date dataInicio;
     @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
     private Date dataFim;
-    private List<Parceiro> lista = new ArrayList<Parceiro>();
+    private List<Parceiro> listaParceiros = new ArrayList<Parceiro>();
 
     public Campanhas() { }
 
-    public List<Parceiro> getLista() {
-        return lista;
+    public List<Parceiro> getListaParceiros() {
+        return listaParceiros;
     }
 
-    public void setLista(List<Parceiro> lista) {
-        this.lista = lista;
+    public void setListaParceiros(List<Parceiro> listaParceiros) {
+        this.listaParceiros = listaParceiros;
     }
 
     public Date getDataInicio() {

@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.Date;
 
 @Service
 public class CampanhasService {
@@ -38,7 +37,7 @@ public class CampanhasService {
             campanha.setId(campanhaAtiva.getId());
 
         campanhaDTO.getParceirosIds()
-                        .forEach( s-> campanha.getLista()
+                        .forEach( s-> campanha.getListaParceiros()
                                                 .add(this.parceirosRepo.findByCnpj(s))
                                 );
         return repo.save(campanha);
