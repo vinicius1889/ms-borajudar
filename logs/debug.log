@@ -137,3 +137,76 @@
 2017-09-08 18:16:38 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
 2017-09-08 18:16:38 - No active profile set, falling back to default profiles: default
 2017-09-08 18:16:41 - Started CampanhasTest in 3.784 seconds (JVM running for 4.3)
+2017-09-08 18:25:14 - Starting CampanhasTest on vinicius-desktop with PID 24392 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:25:14 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:25:14 - No active profile set, falling back to default profiles: default
+2017-09-08 18:25:18 - Started CampanhasTest in 3.785 seconds (JVM running for 4.323)
+2017-09-08 18:27:49 - Starting CampanhasTest on vinicius-desktop with PID 24627 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:27:49 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:27:49 - No active profile set, falling back to default profiles: default
+2017-09-08 18:27:53 - Started CampanhasTest in 3.877 seconds (JVM running for 4.44)
+2017-09-08 18:29:16 - Starting CampanhasTest on vinicius-desktop with PID 24780 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:29:16 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:29:16 - No active profile set, falling back to default profiles: default
+2017-09-08 18:29:19 - Started CampanhasTest in 3.695 seconds (JVM running for 4.286)
+2017-09-08 18:30:51 - Starting CampanhasTest on vinicius-desktop with PID 24965 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:30:51 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:30:51 - No active profile set, falling back to default profiles: default
+2017-09-08 18:30:54 - Started CampanhasTest in 3.808 seconds (JVM running for 4.366)
+2017-09-08 18:31:58 - Starting CampanhasTest on vinicius-desktop with PID 25088 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:31:58 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:31:58 - No active profile set, falling back to default profiles: default
+2017-09-08 18:32:01 - Started CampanhasTest in 3.747 seconds (JVM running for 4.273)
+2017-09-08 18:40:12 - Starting CampanhasTest on vinicius-desktop with PID 25750 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:40:12 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:40:12 - No active profile set, falling back to default profiles: default
+2017-09-08 18:40:15 - Started CampanhasTest in 3.573 seconds (JVM running for 4.093)
+2017-09-08 18:42:27 - Starting CampanhasTest on vinicius-desktop with PID 25912 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:42:27 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:42:27 - No active profile set, falling back to default profiles: default
+2017-09-08 18:42:30 - Started CampanhasTest in 3.628 seconds (JVM running for 4.127)
+2017-09-08 18:43:35 - Starting CampanhasTest on vinicius-desktop with PID 26027 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:43:35 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:43:35 - No active profile set, falling back to default profiles: default
+2017-09-08 18:43:39 - Started CampanhasTest in 3.595 seconds (JVM running for 4.108)
+2017-09-08 18:44:39 - Starting CampanhasTest on vinicius-desktop with PID 26136 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:44:39 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:44:39 - No active profile set, falling back to default profiles: default
+2017-09-08 18:44:42 - Started CampanhasTest in 3.574 seconds (JVM running for 4.089)
+2017-09-08 18:46:27 - Starting CampanhasTest on vinicius-desktop with PID 26268 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:46:27 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:46:27 - No active profile set, falling back to default profiles: default
+2017-09-08 18:46:31 - Started CampanhasTest in 3.602 seconds (JVM running for 4.152)
+2017-09-08 18:47:15 - Starting CampanhasTest on vinicius-desktop with PID 26369 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:47:15 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:47:15 - No active profile set, falling back to default profiles: default
+2017-09-08 18:47:18 - Started CampanhasTest in 3.632 seconds (JVM running for 4.158)
+2017-09-08 18:48:41 - Starting CampanhasTest on vinicius-desktop with PID 26476 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 18:48:41 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 18:48:41 - No active profile set, falling back to default profiles: default
+2017-09-08 18:48:44 - Started CampanhasTest in 3.561 seconds (JVM running for 4.112)
+2017-09-08 19:06:59 - Starting CampanhasTest on vinicius-desktop with PID 27054 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 19:06:59 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 19:06:59 - No active profile set, falling back to default profiles: default
+2017-09-08 19:07:01 - Starting CampanhasTest on vinicius-desktop with PID 27054 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 19:07:01 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 19:07:01 - No active profile set, falling back to default profiles: default
+2017-09-08 19:07:01 - Starting CampanhasTest on vinicius-desktop with PID 27054 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 19:07:01 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 19:07:01 - No active profile set, falling back to default profiles: default
+2017-09-08 19:07:02 - Starting CampanhasTest on vinicius-desktop with PID 27054 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 19:07:02 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 19:07:02 - No active profile set, falling back to default profiles: default
+2017-09-08 19:10:06 - Starting CampanhasTest on vinicius-desktop with PID 27239 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 19:10:06 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 19:10:06 - No active profile set, falling back to default profiles: default
+2017-09-08 19:10:10 - Started CampanhasTest in 3.538 seconds (JVM running for 4.046)
+2017-09-08 19:14:18 - Starting CampanhasTest on vinicius-desktop with PID 27397 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 19:14:18 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 19:14:18 - No active profile set, falling back to default profiles: default
+2017-09-08 19:14:22 - Started CampanhasTest in 3.611 seconds (JVM running for 4.162)
+2017-09-08 19:49:19 - Starting ParceirosTest on vinicius-desktop with PID 28112 (started by vinicius in /home/vinicius/desenv/workspace/microservices/ms-borajudar)
+2017-09-08 19:49:19 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-09-08 19:49:19 - No active profile set, falling back to default profiles: default
+2017-09-08 19:49:23 - Started ParceirosTest in 3.692 seconds (JVM running for 4.247)
+2017-09-08 19:49:23 -  chamando o serviço  salvaParceiro

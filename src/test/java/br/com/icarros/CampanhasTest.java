@@ -2,7 +2,9 @@ package br.com.icarros;
 
 
 import br.com.icarros.domain.Campanhas;
+import br.com.icarros.dto.CampanhasDTO;
 import br.com.icarros.services.JmsReceiver;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,15 +33,24 @@ public class CampanhasTest {
 
 
     @Test
-    public void testaInclusaoCampanha(){
+    public void testaInclusaoCampanha() throws JsonProcessingException {
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.MONTH,1);
-        Campanhas campanha = new Campanhas();
-//        campanha.setDataFim(cal.getTime());
-//        campanha.setDataInicio(Calendar.getInstance().getTime());
+        CampanhasDTO campanha = new CampanhasDTO();
         campanha.setDescricao("descricao de teste ");
         campanha.setTitulo("titulo de teste");
+        campanha.setDataInicio(Calendar.getInstance().getTime());
+        campanha.setDataFim(cal.getTime());
+        campanha.getParceirosIds().add("123456");
         Campanhas campanhaRetorno = rest.postForObject("/campanhas",campanha, Campanhas.class);
+        System.out.println("mapper = " + mapper.writeValueAsString(campanhaRetorno));
+        assertNotNull(campanhaRetorno);
+    }
+
+    @Test
+    public void testaRetornoCampanha() throws JsonProcessingException {
+        Campanhas campanhaRetorno = rest.getForObject("/campanhas", Campanhas.class);
+        System.out.println("mapper = " + mapper.writeValueAsString(campanhaRetorno));
         assertNotNull(campanhaRetorno);
     }
 

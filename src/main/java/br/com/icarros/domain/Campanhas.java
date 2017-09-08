@@ -1,14 +1,18 @@
 package br.com.icarros.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
-import java.util.Calendar;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Document(collection = "campanhas")
 public class Campanhas implements Serializable{
 
@@ -16,32 +20,36 @@ public class Campanhas implements Serializable{
     private String id;
     private String titulo;
     private String descricao;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private Date dataInicio;
+    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
+    private Date dataFim;
+    private List<Parceiro> lista = new ArrayList<Parceiro>();
 
-//    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-//    private Date dataInicio;
-//    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-//    private Date dataFim;
+    public Campanhas() { }
 
-//    private Set<Parceiro> parceiros;
+    public List<Parceiro> getLista() {
+        return lista;
+    }
 
-//
-//    public Date getDataInicio() {
-//        return dataInicio;
-//    }
-//
-//    public void setDataInicio(Date dataInicio) {
-//        this.dataInicio = dataInicio;
-//    }
-//
-//    public Date getDataFim() {
-//        return dataFim;
-//    }
-//
-//    public void setDataFim(Date dataFim) {
-//        this.dataFim = dataFim;
-//    }
+    public void setLista(List<Parceiro> lista) {
+        this.lista = lista;
+    }
 
-    public Campanhas() {
+    public Date getDataInicio() {
+        return dataInicio;
+    }
+
+    public void setDataInicio(Date dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public Date getDataFim() {
+        return dataFim;
+    }
+
+    public void setDataFim(Date dataFim) {
+        this.dataFim = dataFim;
     }
 
     public String getId() {
@@ -67,14 +75,4 @@ public class Campanhas implements Serializable{
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
-//    public Set<Parceiro> getParceiros() {
-//        return parceiros;
-//    }
-//
-//    public void setParceiros(Set<Parceiro> parceiros) {
-//        this.parceiros = parceiros;
-//    }
-
-
 }
