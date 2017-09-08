@@ -8,5 +8,5 @@ import java.util.List;
 
 @NoRepositoryBean
 public interface AbstractRepo<T , E extends Serializable> extends MongoRepository<T,E>{
-    T findByTags(List<String> tags);
+
 }

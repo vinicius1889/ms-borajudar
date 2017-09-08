@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 buildscript {
 	ext {
 		springBootVersion = '1.5.3.RELEASE'
@@ -30,9 +32,6 @@ repositories {
 	}
 }
 
-ext {
-	keycloakVersion = '3.1.0.Final'
-}
 
 configurations {
 	compile.exclude module: "spring-boot-starter-tomcat"
@@ -46,8 +45,6 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-undertow")
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
-	compile('org.springframework.boot:spring-boot-starter-security')
-	compile('org.keycloak:keycloak-spring-boot-starter')
 
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
@@ -68,8 +65,15 @@ dependencies {
 
 }
 
-dependencyManagement {
-	imports {
-		mavenBom "org.keycloak.bom:keycloak-adapter-bom:${keycloakVersion}"
-	}
+
+
+task icarrosBuild() << {
+	def file = new File("$projectDir/src/main/resources/application.properties")
+
+	file.append("""
+info.app.name=$name
+info.app.build=$build
+info.app.date= ${new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())}
+				""")
+
 }

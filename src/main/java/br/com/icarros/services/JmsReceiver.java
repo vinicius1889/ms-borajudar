@@ -12,14 +12,14 @@ public class JmsReceiver {
     @Autowired
     JmsTemplate jmsTemplate;
 
-    @JmsListener(destination = "teste_queue")
-    public void receiverJMS(String json){
-        System.out.println("recebendo = " + json);
-    }
+//    @JmsListener(destination = "teste_queue")
+//    public void receiverJMS(String json){
+//        System.out.println("recebendo = " + json);
+//    }
 
-    public void sendMe(String teste){
-        jmsTemplate.convertAndSend("teste_queue",teste);
-    }
+//    public void sendMe(String teste){
+//        jmsTemplate.convertAndSend("teste_queue",teste);
+//    }
 
 
 }

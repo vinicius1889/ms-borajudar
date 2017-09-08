@@ -19,7 +19,7 @@ public class JmsConfig {
 
     SQSConnectionFactory connectionFactory =
             SQSConnectionFactory.builder()
-                    .withRegion(Region.getRegion(Regions.US_EAST_2))
+                    .withRegion(Region.getRegion(Regions.US_WEST_1))
                     .withAWSCredentialsProvider(new DefaultAWSCredentialsProviderChain())
                     .build();
 
