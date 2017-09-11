@@ -30,8 +30,7 @@ public class VotacaoTest {
     @Test
     public void testaVoto() throws JsonProcessingException {
         RequestVotacaoDTO dto = new RequestVotacaoDTO();
-        dto.setCampanhaKey("123");
-        dto.setUsuariokey("123");
+
         RankingDTO rankingDTO = rest.postForObject("/votacao", dto, RankingDTO.class);
         mapper.writeValueAsString(rankingDTO);
     }

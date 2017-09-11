@@ -16,6 +16,16 @@ public class Usuarios implements Serializable{
 
     private String email;
 
+    private String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     private LocalDateTime dataCadastro;
 
     public Usuarios() {

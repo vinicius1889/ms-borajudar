@@ -1,5 +1,7 @@
 package br.com.icarros.dto;
 
+import br.com.icarros.domain.Usuarios;
+
 import java.io.Serializable;
 
 /**
@@ -7,25 +9,30 @@ import java.io.Serializable;
  */
 public class RequestVotacaoDTO implements Serializable{
 
-    private String usuariokey;
-    private String campanhaKey;
+    private String keyCampanha,keyParceiro;
+    private br.com.icarros.domain.Usuarios usuario;
 
-    public RequestVotacaoDTO() {
+    public String getKeyCampanha() {
+        return keyCampanha;
     }
 
-    public String getUsuariokey() {
-        return usuariokey;
+    public void setKeyCampanha(String keyCampanha) {
+        this.keyCampanha = keyCampanha;
     }
 
-    public void setUsuariokey(String usuariokey) {
-        this.usuariokey = usuariokey;
+    public String getKeyParceiro() {
+        return keyParceiro;
     }
 
-    public String getCampanhaKey() {
-        return campanhaKey;
+    public void setKeyParceiro(String keyParceiro) {
+        this.keyParceiro = keyParceiro;
     }
 
-    public void setCampanhaKey(String campanhaKey) {
-        this.campanhaKey = campanhaKey;
+    public Usuarios getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuarios usuario) {
+        this.usuario = usuario;
     }
 }

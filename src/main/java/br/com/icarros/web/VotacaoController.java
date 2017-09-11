@@ -1,14 +1,10 @@
 package br.com.icarros.web;
 
 import br.com.icarros.dto.RankingDTO;
-import br.com.icarros.dto.ResponseVotacaoVO;
 import br.com.icarros.services.VotacaoService;
 import br.com.icarros.dto.RequestVotacaoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by vinicius on 08/09/17.
@@ -27,7 +23,8 @@ public class VotacaoController {
     }
 
 
-    public RankingDTO ranking(){
-        return service.getRanking();
+    @RequestMapping(value="/{idCampanha}",method = RequestMethod.GET)
+    public RankingDTO ranking(@PathVariable("idCampanha") String idCampanha){
+        return service.getRanking(idCampanha);
     }
 }

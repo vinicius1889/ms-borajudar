@@ -1,14 +1,16 @@
 package br.com.icarros.crons;
 
 
-//@Component
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MyCron {
 
-
-//    @Scheduled(cron = "0 0 1 * * ?")
+//h m s
+    @Scheduled(cron = "* * 5 * * ?")
     public void syncCores(){
-
-
+        System.out.println(" Scheduling" );
     }
 
 

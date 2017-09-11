@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UsuariosRepo extends AbstractRepo<Usuarios,String> {
+
     Usuarios findByCpf(String cpf);
+
 
 }
