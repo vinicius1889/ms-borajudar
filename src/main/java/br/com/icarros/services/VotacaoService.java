@@ -25,15 +25,15 @@ public class VotacaoService {
     @Autowired
     private UsuarioService usuarioService;
 
-    public RankingDTO votar(RequestVotacaoDTO votacao) {
+    public Map<String,Object> votar(RequestVotacaoDTO votacao) {
         Usuarios usuarios = usuarioService.cadastraUsuario(votacao.getUsuario());
         votacao.setUsuario(usuarios);
         Map<String, Object> scoreMap = this.getScoreMap(votacao);
-        return rest.postForObject(endpont + "/score/computevoto", scoreMap, RankingDTO.class);
+        return rest.postForObject(endpont + "/score/computevoto", scoreMap, Map.class);
     }
 
-    public RankingDTO getRanking(String idCampanha) {
-        return rest.getForObject(endpont+"/score/ranking/"+idCampanha,RankingDTO.class);
+    public Map<String,Object> getRanking(String idCampanha) {
+        return rest.getForObject(endpont+"/score/ranking/"+idCampanha,Map.class);
     }
 
 

@@ -2,8 +2,8 @@
 <configuration debug="true" scan="true" scanPeriod="30 seconds">
 
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
-    <property name="FLUENTD_HOST" value="${FLUENTD_HOST:-${DOCKER_HOST:-localhost}}"/>
-    <property name="FLUENTD_PORT" value="${FLUENTD_PORT:-24224}"/>
+    <property name="FLUENTD_HOST" value="ae0e6cb6f972411e79a9d0680c274715-1996524947.us-west-1.elb.amazonaws.com"/>
+    <property name="FLUENTD_PORT" value="24224"/>
 
     <property name="DEV_HOME" value="logs" />
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -74,6 +74,8 @@
 
     <root level="error">
         <appender-ref ref="FILE-ERROR" />
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FLUENT" />
     </root>
 
 

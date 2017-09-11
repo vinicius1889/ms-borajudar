@@ -22,33 +22,7 @@ public class Campanhas implements Serializable{
     private Date dataInicio;
     @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
     private Date dataFim;
-    private List<Parceiro> listaParceiros = new ArrayList<Parceiro>();
-
-    public Campanhas() { }
-
-    public List<Parceiro> getListaParceiros() {
-        return listaParceiros;
-    }
-
-    public void setListaParceiros(List<Parceiro> listaParceiros) {
-        this.listaParceiros = listaParceiros;
-    }
-
-    public Date getDataInicio() {
-        return dataInicio;
-    }
-
-    public void setDataInicio(Date dataInicio) {
-        this.dataInicio = dataInicio;
-    }
-
-    public Date getDataFim() {
-        return dataFim;
-    }
-
-    public void setDataFim(Date dataFim) {
-        this.dataFim = dataFim;
-    }
+    private List<ParceiroScore> listaParceiros = new ArrayList<ParceiroScore>();
 
     public String getId() {
         return id;
@@ -72,5 +46,29 @@ public class Campanhas implements Serializable{
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public Date getDataInicio() {
+        return dataInicio;
+    }
+
+    public void setDataInicio(Date dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public Date getDataFim() {
+        return dataFim;
+    }
+
+    public void setDataFim(Date dataFim) {
+        this.dataFim = dataFim;
+    }
+
+    public List<ParceiroScore> getListaParceiros() {
+        return listaParceiros;
+    }
+
+    public void setListaParceiros(List<ParceiroScore> listaParceiros) {
+        this.listaParceiros = listaParceiros;
     }
 }

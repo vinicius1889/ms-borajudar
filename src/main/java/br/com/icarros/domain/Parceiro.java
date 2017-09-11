@@ -14,6 +14,14 @@ public class Parceiro implements Serializable{
     private String avatar;
     private String cnpj;
 
+    public Parceiro(String id, String nome, String descricao, String avatar, String cnpj) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.avatar = avatar;
+        this.cnpj = cnpj;
+    }
+
     public String getCnpj() {
         return cnpj;
     }

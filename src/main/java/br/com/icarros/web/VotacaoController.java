@@ -6,6 +6,8 @@ import br.com.icarros.dto.RequestVotacaoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 /**
  * Created by vinicius on 08/09/17.
  */
@@ -18,13 +20,13 @@ public class VotacaoController {
 
 
     @RequestMapping(value="/",method = RequestMethod.POST)
-    public RankingDTO votar(@RequestBody RequestVotacaoDTO votacao){
+    public Map<String,Object> votar(@RequestBody RequestVotacaoDTO votacao){
         return service.votar(votacao);
     }
 
 
     @RequestMapping(value="/{idCampanha}",method = RequestMethod.GET)
-    public RankingDTO ranking(@PathVariable("idCampanha") String idCampanha){
+    public Map<String,Object> ranking(@PathVariable("idCampanha") String idCampanha){
         return service.getRanking(idCampanha);
     }
 }
