@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true" scan="true" scanPeriod="30 seconds">
 
+    <property file="src/main/resources/application.properties"/>
+
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
-    <property name="FLUENTD_HOST" value="ae0e6cb6f972411e79a9d0680c274715-1996524947.us-west-1.elb.amazonaws.com"/>
-    <property name="FLUENTD_PORT" value="24224"/>
+    <!--<property name="FLUENTD_HOST" value="ae0e6cb6f972411e79a9d0680c274715-1996524947.us-west-1.elb.amazonaws.com"/>-->
+    <!--<property name="FLUENTD_PORT" value="24224"/>-->
 
     <property name="DEV_HOME" value="logs" />
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -59,8 +61,8 @@
     <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">
         <tag>dab</tag>
         <label>normal</label>
-        <remoteHost>${FLUENTD_HOST}</remoteHost>
-        <port>${FLUENTD_PORT}</port>
+        <remoteHost>${fluentd.host}</remoteHost>
+        <port>${fluentd.port}</port>
         <maxQueueSize>20</maxQueueSize>
     </appender>
 

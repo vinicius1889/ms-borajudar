@@ -75,8 +75,9 @@ task icarrosBuild() << {
 	def file = new File("$projectDir/src/main/resources/application.properties")
 
 	file.append("""
-info.app.name=$name
+info.app.appName=$appName
 info.app.build=$build
+info.app.branch=$branch
 info.app.date= ${new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())}
 				""")
 

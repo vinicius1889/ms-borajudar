@@ -15,6 +15,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Map;
+import java.util.logging.Logger;
+
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
@@ -29,6 +32,7 @@ public class VotacaoTest {
     private TestRestTemplate rest;
 
 
+    @Ignore
     @Test
     public void testaVoto() throws JsonProcessingException {
         for(int  i = 0; i<10;i++){
@@ -38,16 +42,18 @@ public class VotacaoTest {
             Usuarios user = new Usuarios();
             user.setCpf("123456-"+i);
             dto.setUsuario(user);
-            RankingDTO rankingDTO = rest.postForObject("/votacao/", dto, RankingDTO.class);
+            Map<String,Object> rankingDTO = rest.postForObject("/votacao/", dto, Map.class);
             mapper.writeValueAsString(rankingDTO);
         }
     }
 
-    @Ignore
+
     @Test
     public void testaRanking() throws JsonProcessingException {
-        RankingDTO rankingDTO = rest.getForObject("/ranking", RankingDTO.class);
-        mapper.writeValueAsString(rankingDTO);
+        Map<String,Object> rankingDTO = rest.getForObject("/votacao/{idCampanha}", Map.class,"59b6f212f0c97a205e05e1b1");
+        String s = mapper.writeValueAsString(rankingDTO);
+
+
     }
 
 }

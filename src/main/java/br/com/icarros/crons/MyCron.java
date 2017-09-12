@@ -15,8 +15,9 @@ public class MyCron {
     @Scheduled(cron = "* * * * * ?")
     public void syncCores(){
         Logger logger = LoggerFactory.getLogger(getClass());
-//        logger.debug("Teste agora em debug -> "+new Date().getTime());
+        logger.debug("Teste agora em debug -> "+new Date().getTime());
         logger.error("Teste agora em error -> "+new Date().getTime());
+
     }
 
 
