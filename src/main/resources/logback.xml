@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true" scan="true" scanPeriod="30 seconds">
 
-    <property file="src/main/resources/application.properties"/>
 
+    <property resource="application.properties" />
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
     <!--<property name="FLUENTD_HOST" value="ae0e6cb6f972411e79a9d0680c274715-1996524947.us-west-1.elb.amazonaws.com"/>-->
     <!--<property name="FLUENTD_PORT" value="24224"/>-->
 
@@ -65,6 +66,14 @@
         <port>${fluentd.port}</port>
         <maxQueueSize>20</maxQueueSize>
     </appender>
+
+    <!--<appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">-->
+        <!--<tag>${server.contextPath}</tag>-->
+        <!--<label>normal</label>-->
+        <!--<remoteHost>${fluentd.host}</remoteHost>-->
+        <!--<port>${fluentd.port}</port>-->
+        <!--<maxQueueSize>20</maxQueueSize>-->
+    <!--</appender>-->
 
     <!-- Send logs to both console and file audit -->
     <logger name="br.com.icarros" level="debug"
