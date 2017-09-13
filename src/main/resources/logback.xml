@@ -78,13 +78,13 @@
     <!-- Send logs to both console and file audit -->
     <logger name="br.com.icarros" level="debug"
             additivity="false">
-        <appender-ref ref="FILE-AUDIT" />
+        <!--<appender-ref ref="FILE-AUDIT" />-->
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FLUENT" />
     </logger>
 
     <root level="error">
-        <appender-ref ref="FILE-ERROR" />
+        <!--<appender-ref ref="FILE-ERROR" />-->
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FLUENT" />
     </root>
