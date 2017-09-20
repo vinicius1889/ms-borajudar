@@ -71,7 +71,7 @@
         <tag>${server.contextPath}</tag>
         <label>${environment}</label>
         <remoteHost>${host}</remoteHost>
-        <port>${fluentd.port}</port>
+        <port>${fluentPort}</port>
         <maxQueueSize>20</maxQueueSize>
     </appender>
 
