@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true" scan="true" scanPeriod="30 seconds">
 
-    <springProperty scope="context" name="host" source="fluentd.host"
-                    defaultValue="ae0e6cb6f972411e79a9d0680c274715-1996524947.us-west-1.elb.amazonaws.com"/>
-
-    <springProperty scope="context" name="fluentPort" source="fluentd.port"
-                    defaultValue="24224"/>
-
-    <springProperty scope="context" name="environment" source="environment"
-                    defaultValue="dev"/>
-
     <property resource="application.properties" />
+
+    <springProperty scope="context" name="fluent.host" source="fluentd.host"/>
+
+    <springProperty scope="context" name="fluent.port" source="fluentd.port"/>
+
+    <springProperty scope="context" name="fluent.environment" source="environment"/>
+
+
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
     <!--<property name="FLUENTD_HOST" value="ae0e6cb6f972411e79a9d0680c274715-1996524947.us-west-1.elb.amazonaws.com"/>-->
@@ -69,9 +68,9 @@
 
     <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">
         <tag>${server.contextPath}</tag>
-        <label>${environment}</label>
-        <remoteHost>${host}</remoteHost>
-        <port>${fluentPort}</port>
+        <label>${fluent.environment}</label>
+        <remoteHost>${fluent.host}</remoteHost>
+        <port>${fluent.port}</port>
         <maxQueueSize>20</maxQueueSize>
     </appender>
 
