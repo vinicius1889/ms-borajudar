@@ -2,7 +2,14 @@
 <configuration debug="true" scan="true" scanPeriod="30 seconds">
 
     <springProperty scope="context" name="host" source="fluentd.host"
-                    defaultValue="localhost"/>
+                    defaultValue="ae0e6cb6f972411e79a9d0680c274715-1996524947.us-west-1.elb.amazonaws.com"/>
+
+    <springProperty scope="context" name="fluentPort" source="fluentd.port"
+                    defaultValue="24224"/>
+
+    <springProperty scope="context" name="environment" source="environment"
+                    defaultValue="dev"/>
+
     <property resource="application.properties" />
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
@@ -62,7 +69,7 @@
 
     <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">
         <tag>${server.contextPath}</tag>
-        <label>normal</label>
+        <label>${environment}</label>
         <remoteHost>${host}</remoteHost>
         <port>${fluentd.port}</port>
         <maxQueueSize>20</maxQueueSize>
