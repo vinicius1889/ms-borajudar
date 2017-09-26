@@ -12,7 +12,7 @@ import java.util.Date;
 public class MyCron {
 
 //h m s
-    @Scheduled(cron = "* * * * * ?")
+//    @Scheduled(cron = "* * * * * ?")
     public void syncCores(){
         Logger logger = LoggerFactory.getLogger(getClass());
         logger.debug("Teste agora em debug -> "+new Date().getTime());

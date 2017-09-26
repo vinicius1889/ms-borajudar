@@ -71,4 +71,6 @@ public class Campanhas implements Serializable{
     public void setListaParceiros(List<ParceiroScore> listaParceiros) {
         this.listaParceiros = listaParceiros;
     }
+
+
 }

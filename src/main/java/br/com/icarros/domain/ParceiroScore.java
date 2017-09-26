@@ -1,8 +1,6 @@
 package br.com.icarros.domain;
 
-/**
- * Created by vinicius on 11/09/17.
- */
+
 public class ParceiroScore extends Parceiro {
     private long count;
 
